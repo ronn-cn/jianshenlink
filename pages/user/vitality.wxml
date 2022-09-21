@@ -1,0 +1,127 @@
+<!--pages/user/vitality.wxml-->
+<view class="page-bg">
+    <cu-custom isBack="{{true}}" bgColor="{{bgColor}}">
+        <view slot="content">活力</view>
+    </cu-custom>
+    <scroll-view class="main">
+        <view class="flex sport-data-a">
+            <view class="flex-sub block-left">
+                <view class="circle-out">
+                    <image class="circle-bg" src="/images/user/bg_10.png" mode="scaleToFill"></image>
+                    <view class="circle-in">
+                        {{vitalityValue}}
+                    </view>
+                </view>
+            </view>
+            <view class="flex-twice block-right">
+                <view class="block-title">
+                    <text>活力</text>
+                </view>
+                <view class="block-desc">
+                    <text>活力是指运动训练频次发生变化的指数维度</text>
+                </view>
+            </view>
+        </view>
+        <scroll-view scroll-x class="nav text-center element-hide">
+            <view class="cu-item {{TabCur==0?' cur':''}}" bindtap="tabSelect" data-id="0">周</view>
+            <view class="cu-item {{TabCur==1?' cur':''}}" bindtap="tabSelect" data-id="1">月</view>
+            <view class="cu-item {{TabCur==2?' cur':''}}" bindtap="tabSelect" data-id="2">总</view>
+        </scroll-view>
+        <view class="sport-data-b element-hide">
+            <view class="card-title">
+                <text class="title">基础体质趋势</text>
+                <!-- <text class="tip">（2021/08/11）</text> -->
+            </view>
+            <view class="card-content"></view>
+        </view>
+        <view class="sport-data-b">
+            <view class="card-title">
+                <text class="title">运动总计</text>
+                <!-- <text class="tip">（2021/08/11）</text> -->
+            </view>
+            <view class="card-content">
+                <view class="data-item">
+                    <view>总运动时长</view>
+                    <view>
+                        <text class="text-big">{{sportDuration}}</text> 分钟
+                    </view>
+                </view>
+                <view class="data-item">
+                    <view>总运动消耗</view>
+                    <view>
+                        <text class="text-big">{{sportConsumption}}</text> 千卡
+                    </view>
+                </view>
+                <view class="data-item">
+                    <view>总运动天数</view>
+                    <view>
+                        <text class="text-big">{{sportDays}}</text> 天
+                    </view>
+                </view>
+                <view class="data-item">
+                    <view>总运动次数</view>
+                    <view>
+                        <text class="text-big">{{sportCount}}</text> 次
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="sport-data-b">
+            <view class="card-title">
+                <text class="title">运动记录</text>
+                <text class="tip"> （显示近10次记录）</text>
+            </view>
+            <view class="card-content">
+                <view class="record-item" wx:for="{{recordList}}" wx:key="item">
+                    <view class="record-item-line">
+                        <text class="record-item-title">{{item.title}}</text>
+                        <text class="record-item-time">{{item.duration}}</text>
+                    </view>
+                    <view class="record-item-line">
+                        <text class="record-item-date">{{item.date}}</text>
+                        <text class="record-item-text">运动时长</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="sport-data-b element-hide">
+            <view class="card-title">
+                <text class="title">身体成分</text>
+                <text class="tip">（2021/08/11）</text>
+            </view>
+            <view class="card-content">
+                <view class="cu-list menu sm-border">
+                    <view class="cu-item arrow">
+                        <view class="content">
+                            <text class="cuIcon-circlefill text-grey"></text>
+                            <text class="text-black">BMI</text>
+                        </view>
+                        <view class="action">
+                            <text class="text-black text-sm">13.8</text>
+                        </view>
+                    </view>
+                    <view class="cu-item arrow">
+                        <view class="content">
+                            <text class="cuIcon-circlefill text-grey"></text>
+                            <text class="text-black">脂肪率</text>
+                        </view>
+                        <view class="action">
+                            <text class="text-black text-sm">13.8</text>
+                        </view>
+                    </view>
+                    <view class="cu-item arrow">
+                        <view class="content">
+                            <text class="cuIcon-circlefill text-grey"></text>
+                            <text class="text-black">基础代谢量</text>
+                        </view>
+                        <view class="action">
+                            <text class="text-black text-sm">13.8</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class='cu-tabbar-height'></view>
+
+</view>

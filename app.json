@@ -1,0 +1,25 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/login/index",
+		"pages/user/plan",
+		"pages/user/body",
+		"pages/login/profile",
+		"pages/user/sport",
+		"pages/user/vitality"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "Weixin",
+		"navigationBarTextStyle": "black",
+		"navigationStyle": "custom",
+		"backgroundColor": "#fff"
+	},
+	"style": "v2",
+	"sitemapLocation": "sitemap.json",
+	"usingComponents": {
+		"cu-custom": "/colorui/components/cu-custom",
+        "ec-canvas": "/ec-canvas/ec-canvas"
+	}
+}

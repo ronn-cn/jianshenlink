@@ -1,0 +1,101 @@
+/* components/home/index.wxss */
+
+.main{
+    width: 100%;
+    /* background-image: linear-gradient(to bottom, #4b85fe, #dbe5f3, #fff); */
+}
+
+.scan-box{
+    width: 100%;
+    position: relative;
+}
+
+.scan-button{
+    width: 500rpx;
+    height: 500rpx;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.scan-button .scan-button-image{
+    width: 100%;
+    height: 100%;
+    /* width: 60px;
+    height: 60px;
+    position: relative;
+    top: 89px;
+    left: 89px;
+    transform: translate(-50%, -50%); */
+}
+
+.scan-button-tips{
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+}
+
+.scan-button-tips-bg{
+    width: 280rpx;
+    height: 80rpx;
+    box-sizing: content-box;
+}
+
+.card-item{
+    width: 90%;
+    height: 100px;
+    background: white;
+    margin: 15px auto;
+    box-shadow: 0 3px 3px #eee;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.card-item-left{
+    width: 65%;
+    float: left;
+}
+
+.card-item-left-title{
+    display: block;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: white;
+    background-color: #4b85fe;
+    border-radius: 15px 0px 15px 0px;
+}
+
+.card-item-left-text{
+    display: block;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.card-item-right{
+    width: 35%;
+    height: 100%;
+    padding: 5px;
+    float: right;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-item-content-text{
+    float: left;
+    display: inline-block;
+}
+
+.bottom-box{
+    width: 90%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: #aaa;
+    font-size: 10px;
+    margin: 0 auto;
+    background-color: #fff;
+}

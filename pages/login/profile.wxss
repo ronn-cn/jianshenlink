@@ -1,0 +1,84 @@
+/* pages/login/profile.wxss */
+
+.page-bg{
+    background-image: linear-gradient(-45deg,#ffffff 50%, #d7f9fa, #dcebfd);
+}
+
+.header{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.header .title{
+    font-size: 36rpx;
+    font-weight: 500;
+    margin-top: 50rpx;
+}
+
+.header .desc{
+    color: #7b7e7e;
+    font-size: 28rpx;
+    margin-top: 30rpx;
+}
+
+.middle{
+	margin-top: 50rpx;
+	padding-bottom: 10vh;
+    width: 100%;
+    text-align: center;
+}
+.cf{
+	clear: both;
+}
+.block-sex{
+	font-size: 36rpx;
+}
+.block-title{
+	font-size: 36rpx;
+	margin: 50rpx 0;
+}
+
+.radio-group{
+
+}
+.radio-group .radio-new{
+	width: 50%;
+	padding: 0 30rpx;
+	float: left;
+}
+
+
+.radio-new-image{
+	height: 300rpx;
+}
+.radio-new-text{
+
+}
+
+.block-birth{
+	margin-top: 100rpx;
+}
+
+.footer{
+	position: fixed;
+	bottom: 0;
+
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.footer .btn{
+    width: 95%;
+    height: 100rpx;
+    line-height: 100rpx;
+    padding:0;
+    color: white;
+    font-weight: 200;
+    margin: 0 auto;
+    background: rgb(48,114,255);
+    background: linear-gradient(0deg, rgba(48,114,255,1) 35%, rgba(103,155,255,1) 100%);
+    border-radius: 50rpx;
+}

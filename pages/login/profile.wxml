@@ -1,0 +1,54 @@
+<!--pages/login/profile.wxml-->
+<view class="page-bg">
+	<cu-custom bgColor="{{bgColor}}" isBack="{{!first}}">
+		<view slot="content">健身Link</view>
+	</cu-custom>
+	<view class="main">
+		<view class="header" wx:if="{{first}}">
+			<view class="title">欢迎您的加入</view>
+			<view class="desc"> <text>请填写以下信息，从而有助于我们为你提供更准确的\n健康评估，此信息还可为你科学定制个人训练计划</text> </view>
+		</view>
+		<view class="header" wx:else>
+			<view class="title">修改您的信息</view>
+			<view class="desc"> <text>请填写以下信息，从而有助于我们为你提供更准确的\n健康评估，此信息还可为你科学定制个人训练计划</text> </view>
+		</view>
+		<view class="middle">
+			<view class="block-sex">
+				<view class="block-title">性别</view>
+				<view class="radio-group">
+					<view class="radio-new" bindtap="bindSexSelect" data-index="1">
+						<image wx:if="{{sex != 1}}" class="radio-new-image" src="/images/login/1-1.png" mode="aspectFit"></image>
+						<image wx:else class="radio-new-image" src="/images/login/1-2.png" mode="aspectFit"></image>
+						<view class="radio-new-text">男</view>
+					</view>
+					<view class="radio-new" bindtap="bindSexSelect" data-index="0">
+						<image wx:if="{{sex != 0}}" class="radio-new-image" src="/images/login/0-1.png" mode="aspectFit"></image>
+						<image wx:else class="radio-new-image" src="/images/login/0-2.png" mode="aspectFit"></image>
+						<view class="radio-new-text">女</view>
+					</view>
+					<view class="cf"></view>
+				</view>
+			</view>
+			<view class="block-birth">
+				<view class="block-title">出生日期</view>
+				<view>
+					<picker-view indicator-style="height: 50px;" style="width: 100%; height: 150px;" value="{{value}}" bindchange="bindChange">
+						<picker-view-column>
+							<view wx:for="{{years}}" wx:key="years" style="line-height: 50px; text-align: center;">{{item}}年</view>
+						</picker-view-column>
+						<picker-view-column>
+							<view wx:for="{{months}}" wx:key="months" style="line-height: 50px; text-align: center;">{{item}}月</view>
+						</picker-view-column>
+						<picker-view-column>
+							<view wx:for="{{days}}" wx:key="days" style="line-height: 50px; text-align: center;">{{item}}日</view>
+						</picker-view-column>
+					</picker-view>
+				</view>
+			</view>
+		</view>
+		<view class="footer">
+			<button wx:if="{{first}}" class="btn" bindtap="submitTap">提交信息</button>
+			<button wx:else class="btn" bindtap="submitTap">修改信息</button>
+		</view>
+	</view>
+</view>

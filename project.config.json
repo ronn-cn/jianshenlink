@@ -1,0 +1,59 @@
+{
+    "description": "项目配置文件",
+    "packOptions": {
+        "ignore": [
+            {
+                "value": ".eslintrc.js",
+                "type": "file"
+            }
+        ],
+        "include": []
+    },
+    "setting": {
+        "urlCheck": false,
+        "es6": true,
+        "enhance": true,
+        "postcss": false,
+        "preloadBackgroundData": false,
+        "minified": false,
+        "newFeature": false,
+        "coverView": true,
+        "nodeModules": false,
+        "autoAudits": false,
+        "showShadowRootInWxmlPanel": true,
+        "scopeDataCheck": false,
+        "uglifyFileName": false,
+        "checkInvalidKey": true,
+        "checkSiteMap": true,
+        "uploadWithSourceMap": true,
+        "compileHotReLoad": false,
+        "lazyloadPlaceholderEnable": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "enableEngineNative": false,
+        "useIsolateContext": false,
+        "userConfirmedBundleSwitch": false,
+        "packNpmManually": false,
+        "packNpmRelationList": [],
+        "minifyWXSS": true,
+        "disableUseStrict": false,
+        "minifyWXML": true,
+        "showES6CompileOption": false,
+        "useCompilerPlugins": false
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.10.4",
+    "appid": "wx424b6a84728bd0cd",
+    "projectname": "%E8%87%AA%E5%8A%A9%E5%81%A5%E8%BA%AB%E7%A9%BA%E9%97%B4",
+    "condition": {},
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
+    }
+}

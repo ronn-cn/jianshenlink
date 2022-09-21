@@ -1,0 +1,47 @@
+<!--pages/user/plan.wxml-->
+<view class="page-bg">
+    <cu-custom isBack="{{true}}" bgColor="{{bgColor}}">
+        <view slot="content">训练计划</view>
+    </cu-custom>
+    <view class="main">
+        <view class="card">
+            <view class="plan-info-1 float-clear">
+                <text class="plan-title">{{planName}}</text>
+                <text class="plan-progress">{{percentage}}%</text>
+            </view>
+            <view>
+                <view class="cu-progress sm striped active" style="height: 25px; border-radius: 10rpx;">
+                    <view class="bg-blue" style="width:{{percentage}}%;"></view>
+                </view>
+            </view>
+            <view class="plan-info-2">
+                <view class="plan-data-item">计划锻炼：{{planDay}}天</view>
+                <view class="plan-data-item">实际锻炼：{{realDay}}天</view>
+            </view>
+        </view>
+        <calendar class="plan-calendar" bind:change="dateChange" spot='{{spotArr}}'></calendar>
+        <view class="card">
+            <view class="train-title">当日训练</view>
+            <view class="train-panel">
+                <image class="train-panel-image" mode="aspectFill" src="https://www.evinf.cn/images/plan.png"></image>
+                <text class="train-panel-text">{{position}}训练</text>
+                <view wx:if="{{positionStatus == 0}}" class="train-panel-status">
+                    <image class="train-panel-status-image" mode="aspectFill" src="/images/user/ico_status_0.png"></image>
+                    <text class="train-panel-status-text">未完成</text>
+                </view>
+                <view wx:elif="{{positionStatus == 1}}" class="train-panel-status">
+                    <image class="train-panel-status-image" mode="aspectFill" src="/images/user/ico_status_1.png"></image>
+                    <text class="train-panel-status-text">已完成</text>
+                </view>
+                <view wx:elif="{{positionStatus == 2}}" class="train-panel-status">
+                    <image class="train-panel-status-image" mode="aspectFill" src="/images/user/ico_status_2.png"></image>
+                    <text class="train-panel-status-text">待完成</text>
+                </view>
+            </view>
+        </view>
+
+        <view class="card">
+            <button class="cu-btn round bg-blue" bindtap="startLessonTap">开启训练</button>
+        </view>
+    </view>
+</view>

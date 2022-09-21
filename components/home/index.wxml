@@ -1,0 +1,47 @@
+<!--components/home/index.wxml-->
+<scroll-view scroll-y class="scrollPage">
+    <view class="main">
+        <view class="scan-box">
+            <view bindtap="scanCodeTap" class="scan-button">
+                <image class="scan-button-image" src="/images/home/scan.png"></image>
+            </view>
+
+            <view class="scan-button-tips">
+                <image class="scan-button-tips-bg" src="/images/home/tips.png" mode="scaleToFill"></image>
+            </view>
+        </view>
+        <view class="card-box">
+            <view class="card-item">
+                <view class="card-item-left">
+                    <text class="card-item-left-title">1</text>
+                    <text class="card-item-left-text">扫描健身镜或健身器械二维码</text>
+                </view>
+                <view class="card-item-right">
+                    <image mode="widthFix" class="card-image" src="/images/home/img-1.png"></image>
+                </view>
+            </view>
+            <view class="card-item">
+                <view class="card-item-left">
+                    <text class="card-item-left-title">2</text>
+                    <text class="card-item-left-text">授权账户，开启智能器械</text>
+                </view>
+                <view class="card-item-right">
+                    <image mode="widthFix" class="card-image" src="/images/home/img-2.png"></image>
+                </view>
+            </view>
+            <view class="card-item">
+                <view class="card-item-left">
+                    <text class="card-item-left-title">3</text>
+                    <text class="card-item-left-text">开始训练，训练数据同步更新</text>
+                </view>
+                <view class="card-item-right">
+                    <image mode="widthFix" class="card-image" src="/images/home/img-3.png"></image>
+                </view>
+            </view>
+        </view>
+        <!-- <view class="bottom-box">
+            <text>器械无操作10分钟后自动退出</text>
+        </view> -->
+    </view>
+    <view class='cu-tabbar-height'></view>
+</scroll-view>

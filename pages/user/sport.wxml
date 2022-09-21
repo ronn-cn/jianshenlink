@@ -1,0 +1,87 @@
+<!--pages/user/sport.wxml-->
+<view class="page-bg">
+    <cu-custom isBack="{{true}}" bgColor="{{bgColor}}">
+        <view style="height:40px; line-height: 40px;" slot="content">我的</view>
+    </cu-custom>
+    <scroll-view class="main">
+        <view class="flex sport-data-a">
+            <view class="flex-sub block-left">
+                <view class="circle-out">
+                    <image class="circle-bg" src="/images/user/bg_10.png" mode="scaleToFill"></image>
+                    <view class="circle-in">
+                        {{ sportValue }}
+                    </view>
+                </view>
+            </view>
+            <view class="flex-twice block-right">
+                <view class="block-title">
+                    <text>运动能力</text>
+                </view>
+                <view class="block-desc">
+                    <text>运动能力是指综合身体各项基础数据的指数维度</text>
+                </view>
+            </view>
+        </view>
+        <view class="sport-data-b element-hide">
+            <view class="card-title">
+                <text class="title">基础体质趋势</text>
+                <!-- <text class="tip">（2021/08/11）</text> -->
+            </view>
+            <view class="card-content">
+                </view>
+        </view>
+        <view class="sport-data-b">
+            <view class="card-title">
+                <text class="title">肌群能力</text>
+                <text class="tip">（{{ updateDate }}）</text>
+            </view>
+            <view class="card-content height-600">
+                <view class="container">
+                    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec1 }}"></ec-canvas>
+                </view>
+            </view>
+        </view>
+        <view class="sport-data-b">
+            <view class="card-title">
+                <text class="title">体适能指数</text>
+                <text class="tip">（{{updateDate}}）</text>
+            </view>
+            <view class="card-content height-600">
+                <view class="container">
+                    <ec-canvas id="mychart-dom-graph" canvas-id="mychart-graph" ec="{{ ec2 }}"></ec-canvas>
+                </view>
+            </view>
+        </view>
+        <view class="sport-data-b">
+            <view class="card-title">
+                <text class="title">身体成分</text>
+                <text class="tip">（{{updateDate}}）</text>
+            </view>
+            <view class="card-content">
+                <view class="cu-list menu sm-border">
+                <!-- 添加箭头在calss上加入 arrow -->
+                    <view class="cu-item" wx:for="{{bodyData}}" wx:key="item" bindtap="toBodyTap">
+                        <view class="content">
+                            <!-- <text class="cuIcon-circlefill text-grey"></text> -->
+                            <image mode="aspectFill" src="{{ item.image }}"></image>
+                            <text class="text-black">{{item.name}}</text>
+                        </view>
+                        <view class="action">
+                            <text class="text-black text-sm" wx:if="{{ item.value == -1 }}">-</text>
+                            <text class="text-black text-sm" wx:else>{{ item.value }}</text>
+                        </view>
+                        <view class="normal">
+                            <text class="ident ident-a" wx:if="{{item.value<item.range_a}}">偏低</text>
+                            <text class="ident ident-b" wx:elif="{{item.value>=item.range_a&&item.value<item.range_b}}">标准</text>
+                            <text class="ident ident-c" wx:else>偏高</text>
+                        </view>
+                        <view class="next">
+                            <image class="next-image" src="/images/user/right.png" mode="scaleToFill"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class='cu-tabbar-height'></view>
+</view>

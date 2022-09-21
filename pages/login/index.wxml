@@ -1,0 +1,22 @@
+<!--pages/login/index.wxml-->
+
+<view class="page-bg">
+    <cu-custom>
+        <view slot="content">健身Link</view>
+    </cu-custom>
+    <view class="main">
+        <view class="header">
+            <view class="title">登录</view>
+            <view class="desc">健身Link微信小程序将使用您的昵称和头像来登录</view>
+        </view>
+        <view class="middle">
+            <image src="/images/login/main.png" mode="widthFix"></image>
+        </view>
+        <view class="footer">
+            <view class="footer-btn">
+                <button class="btn" bindtap="authorizedLoginTap">授权登录</button>
+            </view>
+            <!-- <text>直接进入体验小程序</text> -->
+        </view>
+    </view>
+</view>

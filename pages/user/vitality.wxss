@@ -1,0 +1,180 @@
+/* pages/user/vitality.wxss */
+/* pages/user/sport.wxss */
+
+.page-bg{
+    background-image: linear-gradient(-45deg,#ffffff 60%, #d7f9fa, #dcebfd);
+}
+
+.main{
+    width: 100%;
+    min-height: 90vh;
+}
+
+.sport-data-a{
+    height: 300rpx;
+}
+
+.sport-data-a .block-left{
+}
+
+.circle-out{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.circle-in{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    line-height: 150rpx;
+    font-size: 60rpx;
+    text-align: center;
+}
+
+.block-right{
+    padding: 10px;
+}
+
+.block-right .block-title{
+    height: 50%;
+    font-size: 32rpx;
+    font-weight: bold;
+    position: relative;
+}
+
+.block-right .block-title text{
+    position: absolute;
+    bottom: 15rpx;
+}
+
+.block-right .block-desc{
+    height: 50%;
+    font-size: 22rpx;
+}
+
+.sport-data-b{
+    width: 95%;
+    background-color: white;
+    margin: 20rpx auto;
+    border-radius: 10rpx;
+    overflow: hidden;
+    box-shadow: 1rpx 1rpx 10rpx #ccc;
+}
+
+.sport-data-b .card-title{
+    height: 100rpx;
+    line-height: 100rpx;
+    padding: 0 20rpx;
+}
+.sport-data-b .card-title .title{
+    font-size: 32rpx;
+    font-weight: bold;
+}
+.sport-data-b .card-title .tip{
+    font-weight: bold;
+    color: #ccc;
+}
+
+.sport-data-b .card-content{
+    min-height: 200rpx;
+    padding: 0 40rpx;
+    padding-bottom: 30rpx;
+}
+
+.data-item{
+    display: inline-block;
+    width: 50%;
+    line-height: 80rpx;
+}
+
+.data-item .text-big{
+    font-size: 40rpx;
+    font-weight: bold;
+}
+
+.record-item-line{
+    clear: both;
+}
+
+.record-item{
+    padding: 30rpx 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.record-item:last-child {
+    border-bottom: none;
+} 
+
+.record-item .record-item-title{
+    display: inline-block;
+    width: 80%;
+    font-size: 30rpx;
+}
+
+.record-item .record-item-time{
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+}
+
+.record-item .record-item-date{
+    display: inline-block;
+    width: 80%;
+    font-size: 24rpx;
+    color: #ccc;
+}
+
+.record-item .record-item-text{
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+    font-size: 24rpx;
+    color: #ccc;
+}
+
+.nav{
+    width: 95%;
+    height: 60rpx;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 60rpx;
+    line-height: 60rpx;
+    padding: 0;
+}
+
+.nav .cu-item{
+    width: 33.33%;
+    height: 60rpx;
+    line-height: 60rpx;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.nav .cu-item.cur{
+    background-color: #4b89f9;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 60rpx;
+    color: white;
+    box-shadow: 1rpx 1rpx 10rpx #4b89f9;
+}

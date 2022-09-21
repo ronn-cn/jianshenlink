@@ -1,0 +1,35 @@
+<!--pages/user/body.wxml-->
+<view class="page-bg">
+    <cu-custom isBack="{{true}}" bgColor="{{bgColor}}">
+        <view style="height:40px; line-height: 40px;" slot="content">身体成分</view>
+    </cu-custom>
+
+	<view class="main">
+		<view class="item-card" wx:for="{{bodyData}}" wx:for-item="item">
+			<view class="item-top">
+				<view class="item-top-left">
+					<image class="icon" src="{{item.image}}"></image>
+					<text class="title">{{item.name}}</text>
+				</view>
+				<view class="item-top-right">
+					<text class="ident ident-a" wx:if="{{item.value<item.range_a}}">偏低</text>
+					<text class="ident ident-b" wx:elif="{{item.value>=item.range_a&&item.value<item.range_b}}">标准</text>
+					<text class="ident ident-c" wx:else>偏高</text>
+					<text class="value">{{item.value}}{{item.unit}}</text>
+				</view>
+			</view>
+			<view class="item-middle">{{item.desc}}</view>
+			<view class="item-bottom">
+				<view class="word flex">
+					<text class="flex-sub">{{item.range_a}}</text>
+					<text class="flex-sub">{{item.range_b}}</text>
+				</view>
+				<view class="bar flex">
+					<view class="flex-sub bar-item bar-left {{item.value<item.range_a?'bar-active':''}}"></view>
+					<view class="flex-sub bar-item bar-middle {{item.value>=item.range_a&&item.value<=item.range_b?'bar-active':''}}"></view>
+					<view class="flex-sub bar-item bar-right {{item.value>item.range_b?'bar-active':''}}"></view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

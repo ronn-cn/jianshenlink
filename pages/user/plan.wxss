@@ -1,0 +1,103 @@
+/* pages/user/plan.wxss */
+
+/* .page-bg{
+    background-image: linear-gradient(-45deg,#ffffff 60%, #d7f9fa, #dcebfd);
+} */
+
+.card{
+	padding: 30rpx;
+}
+
+.plan-title{
+	font-size: 36rpx;
+	font-weight: bold;
+}
+
+.plan-progress {
+	font-size: 36rpx;
+	font-weight: bold;
+	float: right;
+
+}
+
+.plan-info-1{
+	padding: 15rpx 0;
+}
+
+.plan-info-2{
+	padding: 40rpx 0;
+}
+
+.plan-data-item{
+	width: 40%;
+	margin: 0 5%;
+	padding: 20rpx 0;
+	float: left;
+	text-align: center;
+	border-radius: 20rpx;
+	box-shadow: 1px 1px 6px #E0E0E0;
+}
+
+
+.train-title{
+	font-size: 36rpx;
+	font-weight: bold;
+	padding: 20rpx 0;
+}
+
+.train-panel{
+	width: 100%;
+	height: 200rpx;
+	position: relative;
+}
+
+.train-panel-image{
+	width: 100%;
+	height: 180rpx;
+	border-radius: 15rpx;
+}
+
+.train-panel-text{
+	display: inline-block;
+	font-size: 32rpx;
+    position: relative;
+    top: -50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+
+.train-panel-status{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 180rpx;
+	padding: 10rpx;
+}
+
+.train-panel-status-image{
+	width: 50rpx;
+	height: 50rpx;
+	float: left;
+}
+
+.train-panel-status-text{
+	color: #fff;
+	font-size: 30rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+	float: left;
+}
+
+.card .cu-btn{
+	width: 100%;
+	font-size: 30rpx;
+	height: 90rpx;
+	font-weight: 400;
+    background: rgb(48,114,255);
+    background: linear-gradient(0deg, rgba(48,114,255,1) 35%, rgba(103,155,255,1) 100%);
+}
+
+.float-clear{
+	clear: both;
+}
